@@ -1,0 +1,41 @@
+#!/bin/bash
+clear
+
+figlet Password | lolcat
+figlet Generator | lolcat
+
+echo -e "\e[34;1m++--==A tool by Mr.Anybody\e[0m"
+echo -e "\n"
+
+read -p "Enter username: " uname 
+
+if [[ $uname = admin ]]; then
+  echo -e "\e[32mCorrect usermane\e[0m"
+else
+  echo -e "\e[34mWrong username...!\e[0m"
+  sleep 2
+  exit
+  
+fi
+
+read -p "Enter password: " passwd 
+
+if [[ $passwd = admin ]]; then
+  echo -e "\e[32mCorrect password\e[0m"
+else
+  echo -e "\e[34mWrong password....!\e[0m"  
+  sleep 2
+  exit
+fi
+
+read -p "Enter minimun lenth: " m 
+read -p "Enter maximum lenth: " M 
+read -p "Enter output file name [without .txt]: " o 
+read -p "Enter keyword for generate password: " k 
+
+echo -e "Generating password please wait...." | pv -qL 10
+sleep 3
+
+wordlist -m $m -M $M -o $o.txt $k 
+
+
