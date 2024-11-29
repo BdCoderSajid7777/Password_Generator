@@ -3,6 +3,12 @@
 apt update
 ```
 ```
+apt install git -y
+```
+```
+git clone https://github.com/BdCoderSajid7777/Password_Generator
+```
+```
 chmod +x *
 ```
 ```
