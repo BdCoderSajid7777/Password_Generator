@@ -20,3 +20,5 @@ chmod +x *
 ```
 ./pass_gen
 ```
+# Important notice
+# Username and password is admin
